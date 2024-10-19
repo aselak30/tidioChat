@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/47518487.js"></script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/47518487.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            // Wait for HubSpot chat widget to load, then open it automatically
+            window.HubSpotConversations.on('conversationStarted', function() {
+                // Chat window is opened automatically after it is initialized
+                window.HubSpotConversations.widget.open();
+            });
+
+            // Open the chat window once the widget is initialized
+            setTimeout(function() {
+                if (window.HubSpotConversations && window.HubSpotConversations.widget) {
+                    window.HubSpotConversations.widget.open();
+                }
+            }, 2000);  // Delay to ensure the widget is loaded
+        };
+    </script>
 </head>
 <body>
 </body>
