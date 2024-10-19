@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/47518487.js"></script>
+    <style>
+        /* Attempt to hide the close button */
+        .widget-close { 
+            display: none !important;
+        }
+    </style>
     <script type="text/javascript">
         window.onload = function() {
-            // Poll for the HubSpot widget to ensure it's loaded before opening the chat
             let interval = setInterval(function() {
                 if (window.HubSpotConversations && window.HubSpotConversations.widget) {
-                    // Open chat widget directly to the chat list
                     window.HubSpotConversations.widget.open();
-                    clearInterval(interval);  // Stop polling once it's opened
+                    clearInterval(interval);
                 }
-            }, 1000);  // Check every second until the widget is available
+            }, 1000);
         };
     </script>
 </head>
