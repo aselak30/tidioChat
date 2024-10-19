@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -30,52 +20,5 @@
 </head>
 <body>
     <h1>New Chat</h1>
-</body>
-</html>
-
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
-    }
-
-    #startMessage {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: white;
-      z-index: 10;
-    }
-
-    #chatFrame {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-</head>
-<body>
-  <div id="startMessage">
-    <h2>Start New Chat</h2>
-  </div>
-
-  <!-- Placeholder for chat window, initially hidden -->
-  <iframe id="chatFrame" src="https://your-chat-url.com" frameborder="0" style="display:none;"></iframe>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Simulate chat start after some interaction
-      setTimeout(function () {
-        // Hide the start message and show the chat window
-        document.getElementById('startMessage').style.display = 'none';
-        document.getElementById('chatFrame').style.display = 'block';
-      }, 3000); // Wait for 3 seconds before showing the chat
-    });
-  </script>
 </body>
 </html>
